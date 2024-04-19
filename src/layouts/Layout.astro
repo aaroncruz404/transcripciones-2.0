@@ -1,0 +1,35 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="flex bg-yellow-200 h-screen">
+		<main class="bg-purple-800 w-full flex flex-col justify-between">
+			<section class="bg-green-500 h-full">Quiuboles</section>
+
+			<footer class="bg-orange-950">Reproductor</footer>
+		</main>
+
+		<aside class="bg-red-500 w-56">Barra lateral alv</aside>
+	</body>
+</html>
+<style>
+	@media screen and (max-width: 768px) {
+		aside {
+			display: none;
+		}
+	}
+</style>
